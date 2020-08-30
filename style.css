@@ -15,3 +15,7 @@
     max-width: 100% !important;
   }
 }
+
+.active{
+  color: #2a88bf !important;
+}
