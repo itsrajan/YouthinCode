@@ -1,0 +1,17 @@
+.logo{
+  padding-right: 0.5rem;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.socialicon-pad{
+  padding: 0.25rem;
+}
+
+@media only screen and (max-width: 600px){
+  .header .logo{
+    max-width: 100% !important;
+  }
+}
