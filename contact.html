@@ -232,38 +232,53 @@ html {
       <div class="section-title services-title heading">Contact Us</div>
       <div id="services-subtitle" class="services-subtitle section-subtitle">Fill out the form and we will get back to you soon!</div>
     </div>
-    <div class="row"><div class="column col2">
-</div><div class="column  col2">
-
-</div></div><div class="row"><div class="column  col2">
-</div><div class="column  col2">
-</div></div>	</div>
+	</div>
 </div>
 
-<div class="container">
+<!-- <div class="container">
 		<section id="content" class="content">
 			<div id="post-10" class="post-10 page type-page status-publish has-post-thumbnail hentry post-has-thumbnail">
 				<div class="page-content">
-
 <div role="form" class="wpcf7" id="wpcf7-f1990-p10-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"></div>
 
 <form action="POST" data-netlify="true" class="wpcf7-form">
-	<p>Your Name (required)<br />
-		<span class="wpcf7-form-control-wrap your-name"><input type="text" id="name" placeholder="Enter your name..." name="name" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
-		<p>Your Email (required)<br />
-			<span class="wpcf7-form-control-wrap your-email"><input type="email" id="email" placeholder="Enter your email..." name="mail" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
-			<p>Subject<br />
-				<span class="wpcf7-form-control-wrap your-subject"><input type="text" id="subject" placeholder="Enter your subject line..." name="subject" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
-				<p>Your Message<br />
-					<span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" id="message" placeholder="Enter your message..."></textarea>
-					</span> </p>
-					<p><input type="submit" name="submit" value="Submit" onclick="sendContact();" class="wpcf7-form-control wpcf7-submit" /></p>
-				</form>
-</div>
+<p>Your Name (required)<br />
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" id="name" placeholder="Enter your name..." name="name" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+<p>Your Email (required)<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" id="email" placeholder="Enter your email..." name="mail" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
+<p>Subject<br />
+    <span class="wpcf7-form-control-wrap your-subject"><input type="text" id="subject" placeholder="Enter your subject line..." name="subject" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
+<p>Your Message<br />
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" id="message" placeholder="Enter your message..."></textarea>
+    </span> </p>
+<p><input type="submit" name="submit" value="Submit" onclick="sendContact();" class="wpcf7-form-control wpcf7-submit" /></p>
+
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
 		</div>
 	</div>
-</section></div>
+</section>
+</div> -->
+
+<div class="container">
+	<form name="contact" method="POST" data-netlify="true" class="wpcf7-form">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+      <label>Your Subject: <input type="text" name="subject" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit" class="wpcf7-form-control wpcf7-submit">Send</button>
+  </p>
+</form>
+</div>
 
 <footer class="footer-distributed">
 			<div class="footer-left">
