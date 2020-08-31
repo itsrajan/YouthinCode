@@ -19,3 +19,9 @@
 .active{
   color: #2a88bf !important;
 }
+
+.joinus-container{
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
