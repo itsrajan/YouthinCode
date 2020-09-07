@@ -320,6 +320,18 @@
         body.custom-background {
             background-image: url("img/contactbg5.jpg") !important;
         }
+        .column-narrow.col2 {
+            width: 47% !important;
+        }
+        .post {
+            margin: 0.5rem !important; 
+        }
+
+        @media only screen and (max-width: 600px){
+            .column-narrow.col2 {
+                width: auto !important;
+            }
+        }
     </style>
     <style type="text/css" id="wp-custom-css">
         .menu-main li:hover ul {
@@ -389,175 +401,84 @@
                 href="contact.html">Contact</a></li>
     </ul>
 
-    <!--<div id="features" class="section features">
-	<div class="container">
-		<div class=" section-heading features-heading"><div class="section-title features-title heading">Our Key Features</div><div id="features-subtitle" class="features-subtitle section-subtitle">Show &amp; tell</div></div>		<div class="row"><div class="column  col3"><div class="feature">
-			<div class="feature-image primary-color">
-				<div class="feature-icon"><span style="font-family:'linearicons'">&#xe88e</span></div>	</div>
-	<h3 class="feature-title">
-				Highly Versatile			</h3>
-	<div class="feature-content"><p>Allegiant is a highly versatile and flexible WordPress theme</p>
-</div>
-</div>
-</div><div class="column  col3"><div class="feature">
-			<div class="feature-image primary-color">
-				<div class="feature-icon"><span style="font-family:'linearicons'">&#xe809</span></div>	</div>
-	<h3 class="feature-title">
-				For Small Businesses			</h3>
-	<div class="feature-content"><p>Great for small business just starting out. Scales along with you.</p>
-</div>
-</div>
-</div><div class="column  col3"><div class="feature">
-			<div class="feature-image primary-color">
-				<div class="feature-icon"><span style="font-family:'linearicons'">&#xe84b</span></div>	</div>
-	<h3 class="feature-title">
-				Featured Homepage			</h3>
-	<div class="feature-content"><p>Unlimited flexibility with our homepage design. Try the best.</p>
-</div>
-</div>
--->
-
-    </style>
     <div id="testimonials" class="section testimonials">
         <div class="container">
             <div class=" section-heading testimonials-heading">
                 <div class="section-title testimonials-title heading">Events & Workshops</div>
-                <div id="testimonials-subtitle" class="testimonials-subtitle section-subtitle">Coming soon!</div>
+                <div id="testimonials-subtitle" class="testimonials-subtitle section-subtitle"></div>
             </div>
             <div class="row">
-                <div class="column  col3">
-                    <div class="testimonial">
-                        <!--
-	<div class="testimonial-content">
-		<p>Morbi blandit venenatis semper. Nullam ut feugiat nibh. Quisque ac ultricies quam, quis aliquet orci. Phasellus eu nisi ultricies, porttitor augue nec, dictum velit. Proin rutrum fringilla cursus. Sed non odio magna.</p>
-	</div>
-	</div>
-</div><div class="column  col3"><div class="testimonial">
-	<div class="testimonial-content">
-		<p>Morbi blandit venenatis semper. Nullam ut feugiat nibh. Quisque ac ultricies quam, quis aliquet orci. Phasellus eu nisi ultricies, porttitor augue nec, dictum velit. Proin rutrum fringilla cursus. Sed non odio magna.</p>
-	</div>
-	</div>
+                <div class="post column column-narrow col2">
+                    <div class="post-body">
+                        <h2 class="post-title">Web Development Workshop</h2>
+                        <div class="post-byline">
+                        </div>
+                        <div class="post-content">
+                            <h6>September 18 - 20, 2020</h6>
+                            <p>Youth In Code's website developers will be hosting a virtual web development workshop open to everyone! We will be teaching skills from multiple coding languages such as HTML, CSS, and Javascript. In addition, we will be teaching how to use GitHub and Netlify to host and deploy websites, and many more important web development skills!</p>
+                        </div>
+                        <a class="post-readmore button" href="https://docs.google.com/forms/d/e/1FAIpQLSdtXNnNauH2NAxrK9hfeSVBjLnpCLBvh_cMhFVkzVCV9ETEDQ/viewform">Sign Up!</a>
+                    </div>
+                </div>
 
-</div><div class="column  col3"><div class="testimonial">
-	<div class="testimonial-content">
-
-		<p>Morbi blandit venenatis semper. Nullam ut feugiat nibh. Quisque ac ultricies quam, quis aliquet orci. Phasellus eu nisi ultricies, porttitor augue nec, dictum velit. Proin rutrum fringilla cursus. Sed non odio magna.</p>
-	</div>
-		-->
+                <div class="post column column-narrow col2">
+                    <div class="post-body">
+                        <h2 class="post-title">QNA Session</h2>
+                        <div class="post-byline">
+                        </div>
+                        <div class="post-content">
+                            <h6>September 11, 2020 | 3:30 PM PST or 6:30 PM EST</h6>
+                            <p>Youth in Code is hosting its 3rd ever Q&A Session! By attending, you will receive 1 volunteer hour and have the
+                            opportunity to ask what it is like working in the STEM field to our guest speaker Katrina Ezis! She has a lot of
+                            experience with coding so make sure to come join us!</p>
+                        </div>
+                        <a class="post-readmore button" href="https://docs.google.com/forms/d/e/1FAIpQLScTYQZwhYm0ZF8D-7vCVycab1rUMGunxrCH62qpsvn2Bv0m2A/viewform">Sign Up!</a>
                     </div>
                 </div>
             </div>
+
+            <!-- <div class="row">
+                <div class="post column column-narrow col2">
+                    <div class="post-body">
+                        <h2 class="post-title"><a href="https://demos.cpothemes.com/allegiant/standard-post-layout/"
+                                title="Go to Standard Post Layout" rel="bookmark">QNA Session</a></h2>
+                        <div class="post-byline">
+                        </div>
+                        <div class="post-content">
+                            <h6>September 11, 2020</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in quam odio. In eget porttitor
+                                nibh. Integer varius ante id elit mattis blandit. Fusce a mi convallis nisi dictum fringilla.
+                                Duis orci nisl.</p>
+                        </div>
+                        <a class="post-readmore button" href="https://demos.cpothemes.com/allegiant/standard-post-layout/">Sign
+                            Up!</a>
+                    </div>
+                </div>
+            
+                <div class="post column column-narrow col2">
+                    <div class="post-body">
+                        <h2 class="post-title"><a href="https://demos.cpothemes.com/allegiant/standard-post-layout/"
+                                title="Go to Standard Post Layout" rel="bookmark">Web Development Workshop</a></h2>
+                        <div class="post-byline">
+                        </div>
+                        <div class="post-content">
+                            <h6>September 18 - 20, 2020</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in quam odio. In eget porttitor
+                                nibh. Integer varius ante id elit mattis blandit. Fusce a mi convallis nisi dictum fringilla.
+                                Duis orci nisl.</p>
+                        </div>
+                        <a class="post-readmore button" href="https://demos.cpothemes.com/allegiant/standard-post-layout/">Sign
+                            Up!</a>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>        
+    </div>
         </div>
     </div>
-    <!-- <div id="services" class="section services dark">
-	<div class="container">
-		<div class=" section-heading services-heading"><div class="section-title services-title heading">Our Core Services</div><div id="services-subtitle" class="services-subtitle section-subtitle">What we offer</div></div>		<div class="row"><div class="column  col2">
-<div class="service">
-			<a href="https://demos.cpothemes.com/allegiant/service/performance-auditing/">
-			<div class="primary-color service-icon"><span style="font-family:'linearicons'">&#xe83d</span></div>		</a>
-		<div class="service-body">
-
-		<h3 class="service-title">
-			<a href="https://demos.cpothemes.com/allegiant/service/performance-auditing/">Performance Auditing</a>
-		</h3>
-
-		<div class="service-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-		</div>
-			</div>
-</div>
-</div><div class="column  col2">
-<div class="service">
-			<a href="https://demos.cpothemes.com/allegiant/service/web-development/">
-			<div class="primary-color service-icon"><span style="font-family:'linearicons'">&#xe849</span></div>		</a>
-		<div class="service-body">
-
-		<h3 class="service-title">
-			<a href="https://demos.cpothemes.com/allegiant/service/web-development/">Web Development</a>
-		</h3>
-
-		<div class="service-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-		</div>
-			</div>
-</div>
-</div></div><div class="row"><div class="column  col2">
-<div class="service">
-			<a href="https://demos.cpothemes.com/allegiant/service/wordpress-acceleration/">
-			<div class="primary-color service-icon"><span style="font-family:'linearicons'">&#xe843</span></div>		</a>
-		<div class="service-body">
-
-		<h3 class="service-title">
-			<a href="https://demos.cpothemes.com/allegiant/service/wordpress-acceleration/">WordPress Acceleration</a>
-		</h3>
-
-		<div class="service-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-		</div>
-			</div>
-</div>
-</div><div class="column  col2">
-<div class="service">
-			<a href="https://demos.cpothemes.com/allegiant/service/premium-consulting/">
-			<div class="primary-color service-icon"><span style="font-family:'linearicons'">&#xe853</span></div>		</a>
-		<div class="service-body">
-
-		<h3 class="service-title">
-			<a href="https://demos.cpothemes.com/allegiant/service/premium-consulting/">Premium Consulting</a>
-		</h3>
-
-		<div class="service-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-		</div>
-			</div>
-</div>
-</div></div>	</div>
-</div> -->
-
-
-    <!--<div id="team" class="section team">
-		<div class="container">
-			<div class="dark section-heading team-heading"><div class="section-title team-title heading">Meet Our Sponsors</div><div id="team-subtitle" class="team-subtitle section-subtitle">The people that made it all happen</div></div>			<div class="row"><div class="column column-narrow col4"><div class="team-member">
-	<img width="360" height="360" src="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team4-1.jpg" class="team-member-image wp-post-image" alt="" title="" srcset="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team4-1.jpg 360w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team4-1-150x150.jpg 150w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team4-1-300x300.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />	<div class="team-member-body">
-		<h3 class="team-member-title">John Doe</h3>
-		<div class="team-member-description">
-			CEO		</div>
-		<div class="team-member-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-		</div>
-		<div class="team-member-links"><div class="clear"></div></div>			</div>
-</div>
-</div><div class="column column-narrow col4"><div class="team-member">
-	<img width="360" height="360" src="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team5-1.jpg" class="team-member-image wp-post-image" alt="" title="" srcset="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team5-1.jpg 360w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team5-1-150x150.jpg 150w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team5-1-300x300.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />	<div class="team-member-body">
-		<h3 class="team-member-title">Allison Edwards</h3>
-		<div class="team-member-description">
-			Chief Officer		</div>
-		<div class="team-member-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-		</div>
-		<div class="team-member-links"><div class="clear"></div></div>			</div>
-</div>
-</div><div class="column column-narrow col4"><div class="team-member">
-	<img width="360" height="360" src="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team2.jpg" class="team-member-image wp-post-image" alt="" title="" srcset="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team2.jpg 360w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team2-150x150.jpg 150w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team2-300x300.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />	<div class="team-member-body">
-		<h3 class="team-member-title">Mark Atkinson</h3>
-		<div class="team-member-description">
-			Creative Director		</div>
-		<div class="team-member-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-		</div>
-		<div class="team-member-links"><div class="clear"></div></div>			</div>
-</div>
-</div><div class="column column-narrow col4"><div class="team-member">
-	<img width="360" height="360" src="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team1-1.jpg" class="team-member-image wp-post-image" alt="" title="" srcset="https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team1-1.jpg 360w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team1-1-150x150.jpg 150w, https://mk0cpothemesdemokfq4.kinstacdn.com/wp-content/uploads/sites/32/2015/06/team1-1-300x300.jpg 300w" sizes="(max-width: 360px) 100vw, 360px" />	<div class="team-member-body">
-		<h3 class="team-member-title">Lisa Ann</h3>
-		<div class="team-member-description">
-			Lead Designer		</div>
-		<div class="team-member-content">
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-		</div>
-		<div class="team-member-links"><div class="clear"></div></div></div>
-</div>
-</div></div></div></div>-->
+        </div>
+    </div>
 
     <footer class="footer-distributed">
         <div class="footer-left">
@@ -576,11 +497,6 @@
             </p>
             <p class="footer-company-name">YouthInCode &copy; 2020</p>
         </div>
-
-        <!--  <div class="footer-center">
-
-      </div>-->
-
 
         <div class="footer-right">
             <p class="footer-company-about">
