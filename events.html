@@ -339,6 +339,138 @@
             margin-right: 0.5rem !important; 
             margin-left: 0.5rem !important; 
         }
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #556677;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        }
+
+        /* Container around content */
+        .timecontainer {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .timecontainer::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -13px;
+        background-color: white;
+        border: 4px solid #556677;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+        left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+        left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+        left: -13px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 2rem;
+            background-color:#556677;
+            position: relative;
+            border-radius: 6px;
+            color: white;
+        }
+        .content h2, .content h6, .content p {
+            color: white;
+        }
+        .content a{
+            color: white !important;
+            border-color: white !important;
+        }
+        
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+            
+            /* Full-width containers */
+            .timecontainer {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            /* Make sure that all arrows are pointing leftwards */
+            .timecontainer::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
 
         @media only screen and (max-width: 600px){
             .column-narrow.col2 {
@@ -418,27 +550,74 @@
         <div class="container">
             <div class=" section-heading testimonials-heading">
                 <div class="section-title testimonials-title heading">Events & Workshops</div>
-                <div id="testimonials-subtitle" class="testimonials-subtitle section-subtitle"></div>
             </div>
+            <div class="timeline">
 
-            <div class="row">
-                <!-- <div class="post column column-narrow col2">
-                    <div class="post-body">
-                        <h2 class="post-title">Java Workshop</h2>
-                        <div class="post-byline">
+
+                <div class="timecontainer left">
+                    <div class="content">
+                        <div class="post-body">
+                            <h2 class="post-title">Java Workshop</h2>
+                            <div class="post-content">
+                                <h6>February 13, 2021 | 1 pm - 1:45 pm PST,</h6>
+                                <p>Youth In Code will be hosting a 1 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 45 minute - 1 hour lesson and this workshop will focus on Java.</p>
+                            </div>
+                            <a class="post-readmore button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf-yL3cMy1p-HXX09Ct1PqX5eEiEm5-ZQMyPyEYEIIBmR2fwQ/viewform">Sign Up!</a>
                         </div>
-                        <div class="post-content">
-                            <h6>November 15, 2020 | 10:00 AM PST or 1:00 PM PST</h6>
-                            <p>Youth In Code will be hosting a 3 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 1-1.5 hour lesson and this workshop will focus on Java.</p>
-                        </div>
-                        <a class="post-readmore button" href="https://docs.google.com/forms/d/e/1FAIpQLScKlltgiR-hj8NSHqf-Kp9e0j3ff8Hm8xOwzBHPG50XtZoymw/viewform">Sign Up!</a>
                     </div>
-                </div> -->
+                </div>
+
+                <div class="timecontainer right">
+                    <div class="content">
+                        <div class="post-body">
+                        <h2 class="post-title">HTML & CSS Workshop</h2>
+                        
+                        <div class="post-content">
+                            <h6>February 13, 2021 | 2 pm - 2:45 pm PST
+                            </h6>
+                            <p>Youth In Code will be hosting a 1 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 45 minute - 1 hour lesson and this workshop will focus on HTML and CSS.</p>
+                        </div>
+                        <a class="post-readmore button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf-yL3cMy1p-HXX09Ct1PqX5eEiEm5-ZQMyPyEYEIIBmR2fwQ/viewform">Sign Up!</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timecontainer left">
+                    <div class="content">
+                        <div class="post-body">
+                        <h2 class="post-title">Python Turtle Workshop</h2>
+                        
+                        <div class="post-content">
+                            <h6>February 13, 2021 | 3 pm - 3:45 pm PST</h6>
+                            <p>Youth In Code will be hosting a 1 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 45 minute - 1 hour lesson and this workshop will focus on Python Turtle.</p>
+                        </div>
+                        <a class="post-readmore button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf-yL3cMy1p-HXX09Ct1PqX5eEiEm5-ZQMyPyEYEIIBmR2fwQ/viewform">Sign Up!</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timecontainer right">
+                    <div class="content">
+                        <div class="post-body">
+                            <h2 class="post-title">Web Development Workshop</h2>
+                            <div class="post-content">
+                                <h6>September 18 - 20, 2020</h6>
+                                <p>Youth In Code's website developers will be hosting a virtual web development workshop open to everyone! We will be teaching skills from multiple coding languages such as HTML, CSS, and Javascript. In addition, we will be teaching how to use GitHub and Netlify to host and deploy websites, and many more important web development skills!</p>
+                            </div>
+                            <a class="post-readmore button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdtXNnNauH2NAxrK9hfeSVBjLnpCLBvh_cMhFVkzVCV9ETEDQ/viewform">Sign Up!</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+<!-- 
+            <div class="row">
                 <div class="post column column-narrow col2">
                     <div class="post-body">
                         <h2 class="post-title">Java Workshop</h2>
-                        <div class="post-byline">
-                        </div>
+                        
                         <div class="post-content">
                             <h6>November 15, 2020 | 10:00 AM PST or 1:00 PM PST</h6>
                             <p>Youth In Code will be hosting a 3 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 1-1.5 hour lesson and this workshop will focus on Java.</p>
@@ -449,8 +628,7 @@
                 <div class="post column column-narrow col2">
                     <div class="post-body">
                         <h2 class="post-title">Python Turtle Workshop</h2>
-                        <div class="post-byline">
-                        </div>
+                        
                         <div class="post-content">
                             <h6>November 14, 2020 | 1:00 PM PST or 4:00 PM EST</h6>
                             <p>Youth In Code will be hosting a 3 day long workshop centered around Python Turtle, Java, and web development. Each day will consist of a 1-1.5 hour lesson and this workshop will focus on Python Turtle.</p>
@@ -462,8 +640,7 @@
                 <div class="post column column-narrow col2">
                     <div class="post-body">
                         <h2 class="post-title">HTML & CSS Workshop</h2>
-                        <div class="post-byline">
-                        </div>
+                        
                         <div class="post-content">
                             <h6>November 13, 2020 | 5:00 PM PST or 8:00 PM EST
                             </h6>
@@ -475,8 +652,7 @@
                 <div class="post column column-narrow col2">
                     <div class="post-body">
                         <h2 class="post-title">Web Development Workshop</h2>
-                        <div class="post-byline">
-                        </div>
+                        
                         <div class="post-content">
                             <h6>September 18 - 20, 2020</h6>
                             <p>Youth In Code's website developers will be hosting a virtual web development workshop open to everyone! We will be teaching skills from multiple coding languages such as HTML, CSS, and Javascript. In addition, we will be teaching how to use GitHub and Netlify to host and deploy websites, and many more important web development skills!</p>
@@ -488,8 +664,7 @@
                 <div class="post column column-narrow col2">
                     <div class="post-body">
                         <h2 class="post-title">QNA Session</h2>
-                        <div class="post-byline">
-                        </div>
+                        
                         <div class="post-content">
                             <h6>September 11, 2020 | 3:30 PM PST or 6:30 PM EST</h6>
                             <p>Youth in Code is hosting its 3rd ever Q&A Session! By attending, you will receive 1 volunteer hour and have the
@@ -499,15 +674,14 @@
                         <a class="post-readmore button" href="https://docs.google.com/forms/d/e/1FAIpQLScTYQZwhYm0ZF8D-7vCVycab1rUMGunxrCH62qpsvn2Bv0m2A/viewform">Sign Up!</a>
                     </div>
                 </div>
-            </div>
-            
-            
+            </div>  -->
+
         </div>        
     </div>
-        </div>
+        <!-- </div>
     </div>
         </div>
-    </div>
+    </div> -->
 
     <footer class="footer-distributed">
         <div class="footer-left">
